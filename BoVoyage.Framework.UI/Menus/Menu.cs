@@ -32,11 +32,20 @@ namespace BoVoyage.Framework.UI
 				{
 					element.Afficher();
 				}
-				ConsoleHelper.AfficherVotreChoix();
+
+                Console.WriteLine();
+                ConsoleHelper.AfficherVotreChoix();
 				do
 				{
 					var consoleKeyInfo = Console.ReadKey();
 					elementMenu = this.elements.FirstOrDefault((ElementMenu x) => x.Correspondre(consoleKeyInfo.KeyChar.ToString()));
+
+                    if (elementMenu == null)
+                    {
+                        Console.WriteLine();
+                        ConsoleHelper.AfficherMessageErreur("Choix incorrect. ");
+                        ConsoleHelper.AfficherVotreChoix();
+                    }
 				}
 				while (elementMenu == null);
 				elementMenu.Executer();

@@ -32,10 +32,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="BoVoyage.Framework.UI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\BoVoyage.Framework.UI\bin\Debug\BoVoyage.Framework.UI.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="Microsoft.CSharp" />
@@ -50,9 +46,14 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <Content Include="_Lib\BoVoyage.Framework.UI.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BoVoyage.Framework.UI\BoVoyage.Framework.UI.csproj">
+      <Project>{b0cbe33d-4ea1-49a4-92bb-3f7b4547d460}</Project>
+      <Name>BoVoyage.Framework.UI</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

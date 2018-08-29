@@ -76,7 +76,6 @@ namespace BoVoyage.Framework.UI
         public static void AfficherVotreChoix()
         {
             Console.ForegroundColor = CouleursConsole.Saisie;
-            Console.WriteLine();
             Console.Write("> Votre choix : ");
             Console.ResetColor();
         }
